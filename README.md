@@ -56,7 +56,7 @@ the aggregate sweep inside the archive (results/qnn/SWEEP_AGGREGATE.md).
 The primary full-crossmodal run reached held-out exact accuracy `0.999871`
 over 177,849 examples and mean Fourier addition-diagonal energy `0.937730`.
 Full answer-slot patching transferred the answer causally. A later image-pixel
-extension reached held-out template accurcy `0.999899` and foreground IoU
+extension reached held-out template accuracy `0.999899` and foreground IoU
 `0.975426`.
 
 The mechanistic conclusion is deliberately narrower than the behavioral
@@ -98,7 +98,7 @@ The packaged code was checked on 6 August 2026:
 - the three-step classical Tri-Modal training smoke completed end to end.
 
 See [SMOKE_TESTS.md](SMOKE_TESTS.md) and
-[REPRODUCIBILITY.md)(REPRODUCIBILITY.md).
+[REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
 ## Scope
 
