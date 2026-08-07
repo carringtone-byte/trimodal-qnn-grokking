@@ -1,0 +1,96 @@
+seed: 9401
+output_dir: modular_addition_mech_interp/trimodal_qnn_codex/outputs/phase1_operand_query_mod97_bitter_lesson_40k_from_30k
+
+data:
+  modulus: 97
+  train_fraction: 0.3
+  split_seed: 0
+  problem_mode: operand_query
+  train_routes:
+    - TT
+    - TN
+    - TI
+    - NT
+    - NN
+    - NI
+    - IT
+    - IN
+    - II
+  eval_routes:
+    - TT
+    - TN
+    - TI
+    - NT
+    - NN
+    - NI
+    - IT
+    - IN
+    - II
+
+model:
+  problem_mode: operand_query
+  n_qubits: 7
+  n_layers: 4
+  feature_dim: 64
+  operand_feature_dim: 32
+  text_embed_dim: 32
+  image_channels: 12
+  amplitude_mode: fixed_equal
+  ordered_initialization: active_route
+  cross_mixing: true
+  route_mixer_type: dense
+  route_interaction_rank: 0
+  route_interaction_scale: 0.02
+  route_dense_residual_scale: 0.02
+  entangle_content: true
+  head_type: dirac_delta
+  fourier_max_frequency: 21
+  dirac_kernel_init: fejer
+  dirac_kernel_trainable: true
+  dirac_coefficient_mode: none
+  dirac_coefficient_eps: 1.0e-06
+  readout_mode: query_sector
+
+training:
+  steps: 40000
+  batch_size: 256
+  lr: 0.0004
+  weight_decay: 0.01
+  eval_every: 500
+  checkpoint_every: 1000
+  same_sum_loss_weight: 0.0
+  same_sum_loss_start_step: 0
+  same_sum_loss_warmup_steps: 0
+  same_sum_loss_kind: representation_mse
+  same_sum_target: features
+  same_sum_stop_gradient: true
+  same_sum_normalize: true
+  amplitude_balance_weight: 0.0
+  fourier_auxiliary_weight: 0.0
+  fourier_auxiliary_min_frequency: 1
+  fourier_auxiliary_max_frequency: 21
+  fourier_auxiliary_normalize_pairs: true
+  fourier_auxiliary_frequency_power: 0.25
+  layerwise_dirac_loss_weight: 0.0
+  layerwise_dirac_depth_weighted: false
+  hard_neighbor_margin_weight: 0.0
+  hard_neighbor_margin: 1.0
+  hard_neighbor_offsets:
+    - 1
+    - 2
+  hard_neighbor_focus_gamma: 0.0
+  max_grad_norm: 0.5
+  parameter_clip_abs: 20.0
+  sector_mixer_clip_abs: 1.0
+  head_scale_log_min: -4.0
+  head_scale_log_max: 2.0
+  stop_on_nonfinite: true
+  resume_checkpoint: modular_addition_mech_interp/trimodal_qnn_codex/outputs/phase1_operand_query_mod97_bitter_lesson_30k_from_20k/checkpoint_30000.pt
+  resume_optimizer: true
+  device: auto
+
+notes:
+  goal: Continue the successful bitter-lesson operand-query QNN from step 30000 to step 40000.
+  parent_run: modular_addition_mech_interp/trimodal_qnn_codex/outputs/phase1_operand_query_mod97_bitter_lesson_30k_from_20k
+  parent_checkpoint: checkpoint_30000.pt
+  rationale: Continue the unchanged scaling trajectory while preserving the 20k, 28.5k, and 30k checkpoints for mechanistic comparison.

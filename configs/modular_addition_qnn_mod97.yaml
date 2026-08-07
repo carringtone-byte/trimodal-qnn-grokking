@@ -1,0 +1,25 @@
+seed: 9201
+device: cuda
+output_dir: runs/modular_addition_qnn_mod97
+dataset:
+  modulus: 97
+  train_fraction: 0.3
+  seed: 0
+model:
+  n_qubits: 7
+  n_layers: 4
+training:
+  batch_size: 256
+  eval_batch_size: 512
+  steps: 1000
+  lr: 0.01
+  weight_decay: 0.0
+  grad_clip: 1.0
+  eval_every: 100
+  max_eval_batches: null
+  disable_progress: true
+notes:
+  literature_basis:
+    - data re-uploading variational quantum classifiers
+    - quantum feature maps and quantum kernels
+    - variational circuit classifiers with Born-probability or expectation readouts

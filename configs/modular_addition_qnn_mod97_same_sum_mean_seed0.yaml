@@ -1,0 +1,76 @@
+seed: 21730
+device: cuda
+output_dir: runs\modular_addition_qnn_mod97_same_sum_mean_seed0
+dataset:
+  modulus: 97
+  train_fraction: 0.3
+  seed: 0
+model:
+  n_qubits: 7
+  n_layers: 4
+  readout_type: layerwise_dirac_mean
+  fourier_max_frequency: 21
+  fourier_kernel_init: fejer
+  fourier_residual_linear: false
+  fourier_residual_scale: 0.0
+  dirac_coefficient_mode: none
+  dirac_coefficient_eps: 1.0e-06
+  dirac_kernel_trainable: true
+  auxiliary_head_moduli: []
+training:
+  batch_size: 256
+  eval_batch_size: 512
+  steps: 2500
+  lr: 0.003
+  weight_decay: 0.0
+  grad_clip: 1.0
+  eval_every: 250
+  max_eval_batches: null
+  disable_progress: true
+  direct_auxiliary_heads: false
+  auxiliary_residue_losses: []
+  layerwise_dirac_loss_weight: 0.5
+  layerwise_dirac_depth_weighted: true
+  fourier_auxiliary_weight: 0.0
+  dirac_coefficient_norm_weight: 0.0
+  hard_neighbor_margin_weight: 0.35
+  hard_neighbor_margin: 3.0
+  hard_neighbor_offsets:
+  - 1
+  - 2
+  hard_neighbor_focus_gamma: 1.0
+  boundary_oversample_weight: 8.0
+  boundary_operand_width: 5
+  boundary_residue_width: 4
+  wrap_boundary_width: 5
+  initial_readout_refresh_steps: 0
+  readout_refresh_every: 0
+  readout_refresh_steps: 0
+  final_readout_refresh_steps: 0
+  early_stopping_metric: test_accuracy
+  early_stopping_mode: max
+  early_stopping_min_delta: 5.0e-05
+  early_stopping_min_step: 750
+  early_stopping_patience_evals: 5
+  early_stopping_restore_best: true
+  run_final_refresh_on_early_stop: false
+  same_sum_consistency_weight_start: 0.04
+  same_sum_consistency_weight_end: 0.16
+  same_sum_consistency_weight_anneal_steps: 1000
+  same_sum_consistency_ce_weight_start: 0.01
+  same_sum_consistency_ce_weight_end: 0.05
+  same_sum_consistency_ce_weight_anneal_steps: 1000
+  same_sum_consistency_offsets:
+  - 1
+  - -1
+  same_sum_consistency_include_swap: true
+  same_sum_consistency_boundary_only: false
+  same_sum_consistency_temperature: 2.0
+notes:
+  publication_sweep: true
+  architecture: mean
+  model_seed_index: 0
+  split_seed: 0
+  qnn_same_sum_invariance: true
+  train_fraction: 0.3
+  control_run: runs/modular_addition_qnn_pub_mod97_mean_seed0

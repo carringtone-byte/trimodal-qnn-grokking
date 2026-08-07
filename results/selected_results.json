@@ -1,0 +1,35 @@
+{
+  "release_date": "2026-08-06",
+  "classical_trimodal": {
+    "primary_seed": 1704,
+    "heldout_examples": 177849,
+    "heldout_exact_accuracy": 0.9998706768,
+    "fourier_addition_diagonal_energy_mean": 0.9377298207,
+    "image_extension_template_accuracy": 0.9998987905,
+    "image_extension_foreground_iou": 0.9754263965,
+    "interpretation": "Shared cyclic answer machinery with route- and seed-specific access grammar."
+  },
+  "trimodal_qnn": {
+    "modulus": 97,
+    "dirac_mean_seed_count": 5,
+    "dirac_mean_seeds": [9301, 9302, 9303, 9304, 9305],
+    "dirac_mean_heldout_accuracy_mean": 0.923474,
+    "dirac_mean_heldout_accuracy_min": 0.910112,
+    "dirac_mean_heldout_accuracy_max": 0.941543,
+    "operand_query_heldout_accuracy": 0.794497,
+    "operand_query_cross_mixing_ablation_accuracy": 0.010325,
+    "operand_query_exact_query_fourier_energy": 0.967862
+  },
+  "qnn_layerwise_mean": {
+    "statevector_simulator": true,
+    "modulus_31_heldout_accuracy_mean": 0.394750,
+    "modulus_97_heldout_accuracy_mean": 0.975305,
+    "modulus_127_heldout_accuracy_mean": 0.983438,
+    "model_seeds": [0, 1, 2]
+  },
+  "verification": {
+    "focused_unit_tests_passed": 46,
+    "trimodal_qnn_smoke_runs_completed": 2,
+    "classical_trimodal_smoke_runs_completed": 1
+  }
+}

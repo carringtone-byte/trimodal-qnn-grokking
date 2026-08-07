@@ -32,8 +32,8 @@ accuracy across all nine routes. Removing cross-sector mixing reduced accuracy
 to `0.010325`, approximately chance (`1/97`). This is strong causal evidence
 that operand information must be routed into the answer-query sector.
 
-See the full Tri-Modal QNN report inside the archive (reports/RESULTS_TRIMODAL_QNN_CODEX.md) and
-the compact seed-sweep table inside the archive (results/trimodal_qnn/seed_pipeline_summary.csv).
+See [the full Tri-Modal QNN report](reports/RESULTS_TRIMODAL_QNN_CODEX.md) and
+[the compact seed-sweep table](results/trimodal_qnn/seed_pipeline_summary.csv).
 
 ### 2. QNN: fixed layerwise averaging improves exact selection
 
@@ -46,10 +46,10 @@ This is an architecture/intervention result, not evidence of computational
 quantum advantage. All experiments use a classical PyTorch statevector
 simulator.
 
-Selected figure inside the archive: figures/qnn/qnn_seed_modulus_sweep.png.
+![QNN seed and modulus sweep](figures/qnn/qnn_seed_modulus_sweep.png)
 
-See the layerwise QNN report inside the archive (reports/RESULTS_QNN_LAYERWISE_DIRAC.md) and
-the aggregate sweep inside the archive (results/qnn/SWEEP_AGGREGATE.md).
+See [the layerwise QNN report](reports/RESULTS_QNN_LAYERWISE_DIRAC.md) and
+[the aggregate sweep](results/qnn/SWEEP_AGGREGATE.md).
 
 ### 3. Classical Tri-Modal: shared answer geometry, uneven route access
 
@@ -65,11 +65,11 @@ show that route access is not universally zero-shot. Learned transport maps
 meaningfully repair omitted routes, including complete repair for one tested
 `image+number` setting, but usually remain below full-state patching.
 
-Selected figure inside the archive: figures/trimodal_routes/leaveout_learned_transport_route_graph.png.
+![Directed learned transport graph](figures/trimodal_routes/leaveout_learned_transport_route_graph.png)
 
-See the principal Tri-Modal report inside the archive (reports/RESULTS_TRI_MODAL_MODULAR_GROKKING.md),
-rigorous probes inside the archive (reports/RESULTS_TRI_MODAL_RIGOROUS_PROBES.md), and
-route transport maps inside the archive (reports/RESULTS_TRI_MODAL_ROUTE_TRANSPORT_MAPS.md).
+See [the principal Tri-Modal report](reports/RESULTS_TRI_MODAL_MODULAR_GROKKING.md),
+[rigorous probes](reports/RESULTS_TRI_MODAL_RIGOROUS_PROBES.md), and
+[route transport maps](reports/RESULTS_TRI_MODAL_ROUTE_TRANSPORT_MAPS.md).
 
 ## Repository Map
 

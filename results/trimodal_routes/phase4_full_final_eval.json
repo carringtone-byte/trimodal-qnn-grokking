@@ -1,0 +1,559 @@
+{
+  "checkpoint": "tri_modal_modular_grokking\\runs\\phase4_full_crossmodal\\checkpoint_final.pt",
+  "heldout": {
+    "accuracy": 0.999870676810103,
+    "loss": 0.0006468381072221433,
+    "n_examples": 177849,
+    "per_cell": [
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.0004453181282473502,
+        "mode_a": "number",
+        "mode_b": "number",
+        "n_examples": 6587,
+        "output_mode": "number",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 0.00016902088834767695,
+        "mode_a": "number",
+        "mode_b": "number",
+        "n_examples": 6587,
+        "output_mode": "text",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.0004226786924900915,
+        "mode_a": "number",
+        "mode_b": "number",
+        "n_examples": 6587,
+        "output_mode": "image",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.0005372657601396251,
+        "mode_a": "number",
+        "mode_b": "text",
+        "n_examples": 6587,
+        "output_mode": "number",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 0.00018593023271833357,
+        "mode_a": "number",
+        "mode_b": "text",
+        "n_examples": 6587,
+        "output_mode": "text",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 0.9998481858205557,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.0006445534508921352,
+        "mode_a": "number",
+        "mode_b": "text",
+        "n_examples": 6587,
+        "output_mode": "image",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.00030675418965144647,
+        "mode_a": "number",
+        "mode_b": "image",
+        "n_examples": 6587,
+        "output_mode": "number",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 0.00018699247310607122,
+        "mode_a": "number",
+        "mode_b": "image",
+        "n_examples": 6587,
+        "output_mode": "text",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.0003022347813811766,
+        "mode_a": "number",
+        "mode_b": "image",
+        "n_examples": 6587,
+        "output_mode": "image",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.0004513212486278536,
+        "mode_a": "text",
+        "mode_b": "number",
+        "n_examples": 6587,
+        "output_mode": "number",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 0.00016646723249392434,
+        "mode_a": "text",
+        "mode_b": "number",
+        "n_examples": 6587,
+        "output_mode": "text",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.0005494097822073056,
+        "mode_a": "text",
+        "mode_b": "number",
+        "n_examples": 6587,
+        "output_mode": "image",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 0.9995445574616669,
+        "decoder_target_kind": "number",
+        "loss": 0.0014515676088279097,
+        "mode_a": "text",
+        "mode_b": "text",
+        "n_examples": 6587,
+        "output_mode": "number",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 0.9992409291027782,
+        "decoder_target_kind": "text",
+        "loss": 0.0006688657566556925,
+        "mode_a": "text",
+        "mode_b": "text",
+        "n_examples": 6587,
+        "output_mode": "text",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 0.9995445574616669,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.0013791521657620226,
+        "mode_a": "text",
+        "mode_b": "text",
+        "n_examples": 6587,
+        "output_mode": "image",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 0.9995445574616669,
+        "decoder_target_kind": "number",
+        "loss": 0.001928544540405873,
+        "mode_a": "text",
+        "mode_b": "image",
+        "n_examples": 6587,
+        "output_mode": "number",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 0.9996963716411112,
+        "decoder_target_kind": "text",
+        "loss": 0.0005729815193416029,
+        "mode_a": "text",
+        "mode_b": "image",
+        "n_examples": 6587,
+        "output_mode": "text",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 0.9996963716411112,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.0018761091172020457,
+        "mode_a": "text",
+        "mode_b": "image",
+        "n_examples": 6587,
+        "output_mode": "image",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.00030414549163674886,
+        "mode_a": "image",
+        "mode_b": "number",
+        "n_examples": 6587,
+        "output_mode": "number",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 0.00017516261642987958,
+        "mode_a": "image",
+        "mode_b": "number",
+        "n_examples": 6587,
+        "output_mode": "text",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.00030328432379463804,
+        "mode_a": "image",
+        "mode_b": "number",
+        "n_examples": 6587,
+        "output_mode": "image",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 0.9998481858205557,
+        "decoder_target_kind": "number",
+        "loss": 0.0010632656362157694,
+        "mode_a": "image",
+        "mode_b": "text",
+        "n_examples": 6587,
+        "output_mode": "number",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 0.9996963716411112,
+        "decoder_target_kind": "text",
+        "loss": 0.0002689807846522516,
+        "mode_a": "image",
+        "mode_b": "text",
+        "n_examples": 6587,
+        "output_mode": "text",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 0.9998481858205557,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.001090136377117692,
+        "mode_a": "image",
+        "mode_b": "text",
+        "n_examples": 6587,
+        "output_mode": "image",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.0008292809462507601,
+        "mode_a": "image",
+        "mode_b": "image",
+        "n_examples": 6587,
+        "output_mode": "number",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 0.00032387561616636966,
+        "mode_a": "image",
+        "mode_b": "image",
+        "n_examples": 6587,
+        "output_mode": "text",
+        "split": "heldout"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.0008613291237598303,
+        "mode_a": "image",
+        "mode_b": "image",
+        "n_examples": 6587,
+        "output_mode": "image",
+        "split": "heldout"
+      }
+    ],
+    "split": "heldout"
+  },
+  "train": {
+    "accuracy": 1.0,
+    "loss": 0.00011050737331344545,
+    "n_examples": 76194,
+    "per_cell": [
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.00012664092023322962,
+        "mode_a": "number",
+        "mode_b": "number",
+        "n_examples": 2822,
+        "output_mode": "number",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 7.457885462417803e-05,
+        "mode_a": "number",
+        "mode_b": "number",
+        "n_examples": 2822,
+        "output_mode": "text",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.00012591187967598693,
+        "mode_a": "number",
+        "mode_b": "number",
+        "n_examples": 2822,
+        "output_mode": "image",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.00012436704930415723,
+        "mode_a": "number",
+        "mode_b": "text",
+        "n_examples": 2822,
+        "output_mode": "number",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 6.940550464393557e-05,
+        "mode_a": "number",
+        "mode_b": "text",
+        "n_examples": 2822,
+        "output_mode": "text",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.00012376140424398235,
+        "mode_a": "number",
+        "mode_b": "text",
+        "n_examples": 2822,
+        "output_mode": "image",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.00012065495700495545,
+        "mode_a": "number",
+        "mode_b": "image",
+        "n_examples": 2822,
+        "output_mode": "number",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 6.705459170911427e-05,
+        "mode_a": "number",
+        "mode_b": "image",
+        "n_examples": 2822,
+        "output_mode": "text",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.00012069678022001469,
+        "mode_a": "number",
+        "mode_b": "image",
+        "n_examples": 2822,
+        "output_mode": "image",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.00012032972287530545,
+        "mode_a": "text",
+        "mode_b": "number",
+        "n_examples": 2822,
+        "output_mode": "number",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 6.761560302351824e-05,
+        "mode_a": "text",
+        "mode_b": "number",
+        "n_examples": 2822,
+        "output_mode": "text",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.00011949243207483914,
+        "mode_a": "text",
+        "mode_b": "number",
+        "n_examples": 2822,
+        "output_mode": "image",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.0001495964314444037,
+        "mode_a": "text",
+        "mode_b": "text",
+        "n_examples": 2822,
+        "output_mode": "number",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 8.520446562628684e-05,
+        "mode_a": "text",
+        "mode_b": "text",
+        "n_examples": 2822,
+        "output_mode": "text",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.0001487945616350877,
+        "mode_a": "text",
+        "mode_b": "text",
+        "n_examples": 2822,
+        "output_mode": "image",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.00014159093011292074,
+        "mode_a": "text",
+        "mode_b": "image",
+        "n_examples": 2822,
+        "output_mode": "number",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 8.133961889242013e-05,
+        "mode_a": "text",
+        "mode_b": "image",
+        "n_examples": 2822,
+        "output_mode": "text",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.00014134116999179252,
+        "mode_a": "text",
+        "mode_b": "image",
+        "n_examples": 2822,
+        "output_mode": "image",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.00012099772570773558,
+        "mode_a": "image",
+        "mode_b": "number",
+        "n_examples": 2822,
+        "output_mode": "number",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 6.730898109252791e-05,
+        "mode_a": "image",
+        "mode_b": "number",
+        "n_examples": 2822,
+        "output_mode": "text",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.00011975319393891326,
+        "mode_a": "image",
+        "mode_b": "number",
+        "n_examples": 2822,
+        "output_mode": "image",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.00012427749510585185,
+        "mode_a": "image",
+        "mode_b": "text",
+        "n_examples": 2822,
+        "output_mode": "number",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 6.792040574852797e-05,
+        "mode_a": "image",
+        "mode_b": "text",
+        "n_examples": 2822,
+        "output_mode": "text",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.00012351517985666647,
+        "mode_a": "image",
+        "mode_b": "text",
+        "n_examples": 2822,
+        "output_mode": "image",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "number",
+        "loss": 0.00013809902225518736,
+        "mode_a": "image",
+        "mode_b": "image",
+        "n_examples": 2822,
+        "output_mode": "number",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "text",
+        "loss": 7.435575123971379e-05,
+        "mode_a": "image",
+        "mode_b": "image",
+        "n_examples": 2822,
+        "output_mode": "text",
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "decoder_target_kind": "image_class_proxy",
+        "loss": 0.00013909444751179678,
+        "mode_a": "image",
+        "mode_b": "image",
+        "n_examples": 2822,
+        "output_mode": "image",
+        "split": "train"
+      }
+    ],
+    "split": "train"
+  }
+}

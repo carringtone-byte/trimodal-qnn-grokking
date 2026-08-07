@@ -1,0 +1,35 @@
+seed: 12
+output_dir: trimodal_qnn_codex/outputs/smoke_ordered_route
+
+data:
+  modulus: 7
+  train_fraction: 0.65
+  split_seed: 12
+  problem_mode: ordered_route
+  train_routes: ["TT", "NN", "II", "TN", "NI"]
+  eval_routes: ["TT", "TN", "TI", "NT", "NN", "NI", "IT", "IN", "II"]
+
+model:
+  problem_mode: ordered_route
+  n_qubits: 3
+  n_layers: 2
+  feature_dim: 24
+  operand_feature_dim: 16
+  text_embed_dim: 16
+  image_channels: 6
+  amplitude_mode: fixed_equal
+  ordered_initialization: active_route
+  cross_mixing: true
+  entangle_content: true
+  fourier_max_frequency: 3
+
+training:
+  steps: 20
+  batch_size: 32
+  lr: 0.004
+  weight_decay: 0.0
+  eval_every: 10
+  checkpoint_every: 20
+  same_sum_loss_weight: 0.01
+  amplitude_balance_weight: 0.0
+  device: auto

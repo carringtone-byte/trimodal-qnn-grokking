@@ -1,0 +1,296 @@
+{
+  "checkpoint": "tri_modal_modular_grokking\\runs\\phase9_full_crossmodal_image_pixels\\checkpoint_15000.pt",
+  "checkpoint_step": 15000,
+  "decoder_interface": "ImagePixelDecoder.forward(answer_slot) only; no direct a/b/mode inputs.",
+  "heldout_behavior": {
+    "accuracy": 0.9998987905470371,
+    "image_examples": 59283,
+    "image_foreground_iou": 0.9754263965043072,
+    "image_pixel_mae": 0.0011236147325317976,
+    "image_template_accuracy": 0.9998987905470371,
+    "n_examples": 177849,
+    "split": "heldout"
+  },
+  "metadata_cells": [
+    {
+      "id": 0,
+      "key": "number+number->number",
+      "mode_a": "number",
+      "mode_b": "number",
+      "output_mode": "number"
+    },
+    {
+      "id": 1,
+      "key": "number+number->text",
+      "mode_a": "number",
+      "mode_b": "number",
+      "output_mode": "text"
+    },
+    {
+      "id": 2,
+      "key": "number+number->image",
+      "mode_a": "number",
+      "mode_b": "number",
+      "output_mode": "image"
+    },
+    {
+      "id": 3,
+      "key": "number+text->number",
+      "mode_a": "number",
+      "mode_b": "text",
+      "output_mode": "number"
+    },
+    {
+      "id": 4,
+      "key": "number+text->text",
+      "mode_a": "number",
+      "mode_b": "text",
+      "output_mode": "text"
+    },
+    {
+      "id": 5,
+      "key": "number+text->image",
+      "mode_a": "number",
+      "mode_b": "text",
+      "output_mode": "image"
+    },
+    {
+      "id": 6,
+      "key": "number+image->number",
+      "mode_a": "number",
+      "mode_b": "image",
+      "output_mode": "number"
+    },
+    {
+      "id": 7,
+      "key": "number+image->text",
+      "mode_a": "number",
+      "mode_b": "image",
+      "output_mode": "text"
+    },
+    {
+      "id": 8,
+      "key": "number+image->image",
+      "mode_a": "number",
+      "mode_b": "image",
+      "output_mode": "image"
+    },
+    {
+      "id": 9,
+      "key": "text+number->number",
+      "mode_a": "text",
+      "mode_b": "number",
+      "output_mode": "number"
+    },
+    {
+      "id": 10,
+      "key": "text+number->text",
+      "mode_a": "text",
+      "mode_b": "number",
+      "output_mode": "text"
+    },
+    {
+      "id": 11,
+      "key": "text+number->image",
+      "mode_a": "text",
+      "mode_b": "number",
+      "output_mode": "image"
+    },
+    {
+      "id": 12,
+      "key": "text+text->number",
+      "mode_a": "text",
+      "mode_b": "text",
+      "output_mode": "number"
+    },
+    {
+      "id": 13,
+      "key": "text+text->text",
+      "mode_a": "text",
+      "mode_b": "text",
+      "output_mode": "text"
+    },
+    {
+      "id": 14,
+      "key": "text+text->image",
+      "mode_a": "text",
+      "mode_b": "text",
+      "output_mode": "image"
+    },
+    {
+      "id": 15,
+      "key": "text+image->number",
+      "mode_a": "text",
+      "mode_b": "image",
+      "output_mode": "number"
+    },
+    {
+      "id": 16,
+      "key": "text+image->text",
+      "mode_a": "text",
+      "mode_b": "image",
+      "output_mode": "text"
+    },
+    {
+      "id": 17,
+      "key": "text+image->image",
+      "mode_a": "text",
+      "mode_b": "image",
+      "output_mode": "image"
+    },
+    {
+      "id": 18,
+      "key": "image+number->number",
+      "mode_a": "image",
+      "mode_b": "number",
+      "output_mode": "number"
+    },
+    {
+      "id": 19,
+      "key": "image+number->text",
+      "mode_a": "image",
+      "mode_b": "number",
+      "output_mode": "text"
+    },
+    {
+      "id": 20,
+      "key": "image+number->image",
+      "mode_a": "image",
+      "mode_b": "number",
+      "output_mode": "image"
+    },
+    {
+      "id": 21,
+      "key": "image+text->number",
+      "mode_a": "image",
+      "mode_b": "text",
+      "output_mode": "number"
+    },
+    {
+      "id": 22,
+      "key": "image+text->text",
+      "mode_a": "image",
+      "mode_b": "text",
+      "output_mode": "text"
+    },
+    {
+      "id": 23,
+      "key": "image+text->image",
+      "mode_a": "image",
+      "mode_b": "text",
+      "output_mode": "image"
+    },
+    {
+      "id": 24,
+      "key": "image+image->number",
+      "mode_a": "image",
+      "mode_b": "image",
+      "output_mode": "number"
+    },
+    {
+      "id": 25,
+      "key": "image+image->text",
+      "mode_a": "image",
+      "mode_b": "image",
+      "output_mode": "text"
+    },
+    {
+      "id": 26,
+      "key": "image+image->image",
+      "mode_a": "image",
+      "mode_b": "image",
+      "output_mode": "image"
+    }
+  ],
+  "model_parameters": 1503859,
+  "patch_result": {
+    "baseline_clean_template_accuracy": 0.0,
+    "baseline_corrupt_template_accuracy": 1.0,
+    "n_examples": 512,
+    "patch": "number+number->number final answer_slot -> image+image->image image decoder",
+    "patched_clean_template_accuracy": 1.0,
+    "patched_corrupt_template_accuracy": 0.0,
+    "patched_pixel_mae_to_clean": 0.0023640147410333157,
+    "patched_pixel_mae_to_corrupt": 0.04597388952970505
+  },
+  "probe_rows": [
+    {
+      "heldout_accuracy": 0.9989485740661621,
+      "lambda": 0.0001,
+      "n_heldout": 177849,
+      "n_train": 76194,
+      "permutation_control_heldout_accuracy": 0.0076131997630000114,
+      "probe": "global_pair_disjoint_final_slot",
+      "target": "s",
+      "train_accuracy": 1.0
+    },
+    {
+      "heldout_accuracy": 0.22904261946678162,
+      "lambda": 10.0,
+      "n_heldout": 177849,
+      "n_train": 76194,
+      "permutation_control_heldout_accuracy": "",
+      "probe": "global_pair_disjoint_final_slot",
+      "target": "a",
+      "train_accuracy": 0.5817387104034424
+    },
+    {
+      "heldout_accuracy": 0.16967764496803284,
+      "lambda": 1.0,
+      "n_heldout": 177849,
+      "n_train": 76194,
+      "permutation_control_heldout_accuracy": "",
+      "probe": "global_pair_disjoint_final_slot",
+      "target": "b",
+      "train_accuracy": 0.511090099811554
+    },
+    {
+      "heldout_accuracy": 0.9874387979507446,
+      "lambda": 10.0,
+      "n_heldout": 177849,
+      "n_train": 76194,
+      "permutation_control_heldout_accuracy": "",
+      "probe": "global_pair_disjoint_final_slot",
+      "target": "wrap",
+      "train_accuracy": 0.9910622835159302
+    }
+  ],
+  "train_behavior": {
+    "accuracy": 1.0,
+    "image_examples": 25398,
+    "image_foreground_iou": 0.9775775585299223,
+    "image_pixel_mae": 0.001032702746245981,
+    "image_template_accuracy": 1.0,
+    "n_examples": 76194,
+    "split": "train"
+  },
+  "transfer_rows": [
+    {
+      "heldout_accuracy": 0.9988529682159424,
+      "lambda": 0.0001,
+      "n_heldout": 59283,
+      "n_train": 50796,
+      "probe": "non_image_output_to_image_output",
+      "target": "s",
+      "train_accuracy": 1.0
+    },
+    {
+      "heldout_accuracy": 0.9973517060279846,
+      "lambda": 0.0001,
+      "n_heldout": 118566,
+      "n_train": 25398,
+      "probe": "image_output_to_non_image_output",
+      "target": "s",
+      "train_accuracy": 1.0
+    },
+    {
+      "heldout_accuracy": 0.9989373087882996,
+      "lambda": 0.0001,
+      "n_heldout": 59283,
+      "n_train": 25398,
+      "probe": "image_output_to_image_output",
+      "target": "s",
+      "train_accuracy": 1.0
+    }
+  ]
+}

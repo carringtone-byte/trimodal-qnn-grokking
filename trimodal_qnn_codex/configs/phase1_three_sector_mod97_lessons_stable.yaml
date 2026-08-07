@@ -1,0 +1,47 @@
+seed: 9101
+output_dir: trimodal_qnn_codex/outputs/phase1_three_sector_mod97_lessons_stable
+
+data:
+  modulus: 97
+  train_fraction: 0.30
+  split_seed: 0
+  problem_mode: three_sector
+  train_routes: null
+  eval_routes: null
+
+model:
+  problem_mode: three_sector
+  n_qubits: 6
+  n_layers: 4
+  feature_dim: 64
+  operand_feature_dim: 32
+  text_embed_dim: 32
+  image_channels: 12
+  amplitude_mode: fixed_equal
+  ordered_initialization: active_route
+  cross_mixing: true
+  entangle_content: true
+  fourier_max_frequency: 21
+  fourier_residual: true
+
+training:
+  steps: 30000
+  batch_size: 256
+  lr: 0.001
+  weight_decay: 0.0001
+  eval_every: 1000
+  checkpoint_every: 1000
+  same_sum_loss_weight: 0.005
+  amplitude_balance_weight: 0.0
+  fourier_auxiliary_weight: 0.15
+  fourier_auxiliary_min_frequency: 1
+  fourier_auxiliary_max_frequency: 21
+  fourier_auxiliary_normalize_pairs: true
+  fourier_auxiliary_frequency_power: 0.5
+  hard_neighbor_margin_weight: 0.10
+  hard_neighbor_margin: 2.0
+  hard_neighbor_offsets: [1, 2]
+  hard_neighbor_focus_gamma: 0.5
+  max_grad_norm: 1.0
+  stop_on_nonfinite: true
+  device: auto

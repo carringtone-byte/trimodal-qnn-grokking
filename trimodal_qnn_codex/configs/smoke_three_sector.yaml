@@ -1,0 +1,32 @@
+seed: 11
+output_dir: trimodal_qnn_codex/outputs/smoke_three_sector
+
+data:
+  modulus: 7
+  train_fraction: 0.65
+  split_seed: 11
+  problem_mode: three_sector
+
+model:
+  problem_mode: three_sector
+  n_qubits: 3
+  n_layers: 2
+  feature_dim: 24
+  operand_feature_dim: 16
+  text_embed_dim: 16
+  image_channels: 6
+  amplitude_mode: learnable_real
+  cross_mixing: true
+  entangle_content: true
+  fourier_max_frequency: 3
+
+training:
+  steps: 20
+  batch_size: 16
+  lr: 0.004
+  weight_decay: 0.0
+  eval_every: 10
+  checkpoint_every: 20
+  same_sum_loss_weight: 0.01
+  amplitude_balance_weight: 0.001
+  device: auto

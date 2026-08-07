@@ -1,0 +1,52 @@
+seed: 93
+output_dir: trimodal_qnn_codex/outputs/smoke_three_sector_dirac_mean
+
+data:
+  modulus: 7
+  train_fraction: 0.60
+  split_seed: 0
+  problem_mode: three_sector
+  train_routes: null
+  eval_routes: null
+
+model:
+  problem_mode: three_sector
+  n_qubits: 2
+  n_layers: 2
+  feature_dim: 12
+  operand_feature_dim: 8
+  text_embed_dim: 8
+  image_channels: 4
+  amplitude_mode: fixed_equal
+  ordered_initialization: active_route
+  cross_mixing: true
+  entangle_content: true
+  head_type: layerwise_dirac_mean
+  fourier_max_frequency: 3
+  dirac_kernel_init: fejer
+  dirac_kernel_trainable: true
+  dirac_coefficient_mode: none
+  dirac_coefficient_eps: 1.0e-6
+
+training:
+  steps: 4
+  batch_size: 8
+  lr: 0.001
+  weight_decay: 0.0
+  eval_every: 2
+  checkpoint_every: 4
+  same_sum_loss_weight: 0.0
+  amplitude_balance_weight: 0.0
+  fourier_auxiliary_weight: 0.0
+  layerwise_dirac_loss_weight: 0.25
+  layerwise_dirac_depth_weighted: true
+  hard_neighbor_margin_weight: 0.0
+  max_grad_norm: 1.0
+  parameter_clip_abs: 20.0
+  sector_mixer_clip_abs: 1.0
+  head_scale_log_min: -4.0
+  head_scale_log_max: 2.0
+  stop_on_nonfinite: true
+  resume_checkpoint: null
+  resume_optimizer: true
+  device: auto

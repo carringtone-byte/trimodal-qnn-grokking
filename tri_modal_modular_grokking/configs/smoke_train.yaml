@@ -1,0 +1,35 @@
+seed: 1701
+device: auto
+output_dir: tri_modal_modular_grokking/runs/smoke
+dataset:
+  modulus: 17
+  train_fraction: 0.30
+  seed: 0
+  input_modes: [number, text, image]
+  output_modes: [number, text, image]
+  decoder_target_kind: image_class_proxy
+  max_examples: 12
+  render:
+    height: 32
+    width: 64
+    render_style: digit
+    font_size: 20
+model:
+  d_model: 48
+  n_layers: 1
+  n_heads: 3
+  d_ff: 96
+  image_tokens: 4
+training:
+  batch_size: 32
+  steps: 3
+  lr: 0.001
+  weight_decay: 0.0
+  eval_every: 1
+  max_eval_batches: 2
+  disable_progress: true
+loss:
+  number_ce_weight: 1.0
+  text_ce_weight: 1.0
+  image_ce_or_vq_weight: 1.0
+  residue_supcon_weight: 0.0

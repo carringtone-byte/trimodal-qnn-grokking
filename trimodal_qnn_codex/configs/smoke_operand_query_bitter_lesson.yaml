@@ -1,0 +1,52 @@
+seed: 9401
+output_dir: modular_addition_mech_interp/trimodal_qnn_codex/outputs/smoke_operand_query_bitter_lesson
+
+data:
+  modulus: 7
+  train_fraction: 0.50
+  split_seed: 0
+  problem_mode: operand_query
+  train_routes: ["TT", "TN", "TI", "NT", "NN", "NI", "IT", "IN", "II"]
+  eval_routes: ["TT", "TN", "TI", "NT", "NN", "NI", "IT", "IN", "II"]
+
+model:
+  problem_mode: operand_query
+  n_qubits: 3
+  n_layers: 2
+  feature_dim: 16
+  operand_feature_dim: 12
+  text_embed_dim: 12
+  image_channels: 4
+  amplitude_mode: fixed_equal
+  cross_mixing: true
+  route_mixer_type: dense
+  readout_mode: query_sector
+  entangle_content: true
+  head_type: dirac_delta
+  fourier_max_frequency: 3
+  dirac_kernel_init: fejer
+  dirac_kernel_trainable: true
+  dirac_coefficient_mode: none
+  dirac_coefficient_eps: 1.0e-6
+
+training:
+  steps: 3
+  batch_size: 16
+  lr: 0.0004
+  weight_decay: 0.01
+  eval_every: 1
+  checkpoint_every: 3
+  same_sum_loss_weight: 0.0
+  amplitude_balance_weight: 0.0
+  fourier_auxiliary_weight: 0.0
+  layerwise_dirac_loss_weight: 0.0
+  hard_neighbor_margin_weight: 0.0
+  max_grad_norm: 0.5
+  parameter_clip_abs: 20.0
+  sector_mixer_clip_abs: 1.0
+  head_scale_log_min: -4.0
+  head_scale_log_max: 2.0
+  stop_on_nonfinite: true
+  resume_checkpoint: null
+  resume_optimizer: true
+  device: auto
