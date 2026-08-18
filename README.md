@@ -1,6 +1,6 @@
 # Tri-Modal and QNN Grokking
 
-This research release studies how neural and simulated quantum models learn
+We study how neural and simulated quantum models learn
 modular addition across number, text, and image representations. It combines
 three related questions:
 
@@ -11,7 +11,7 @@ three related questions:
 
 The strongest evidence supports **shared cyclic answer machinery with
 route-, seed-, and modality-specific access**, not a perfectly symmetric
-universal modality manifold and not a claim of quantum advantage.
+universal modality manifold and no quantum advantage in the case of QNNs.
 
 ## Selected Results
 
@@ -42,8 +42,7 @@ held-out accuracy `0.975305` at modulus 97 and `0.983438` at modulus 127. It
 was the strongest tested QNN family at those moduli. The result did not
 transfer uniformly to modulus 31, where mean held-out accuracy was `0.394750`.
 
-This is an architecture/intervention result, not evidence of computational
-quantum advantage. All experiments use a classical PyTorch statevector
+ All experiments use a classical PyTorch statevector
 simulator.
 
 ![QNN seed and modulus sweep](figures/qnn/qnn_seed_modulus_sweep.png)
@@ -58,9 +57,7 @@ over 177,849 examples and mean Fourier addition-diagonal energy `0.937730`.
 Full answer-slot patching transferred the answer causally. A later image-pixel
 extension reached held-out template accuracy `0.999899` and foreground IoU
 `0.975426`.
-
-The mechanistic conclusion is deliberately narrower than the behavioral
-score. Strict linear-chart evidence varies by seed, and leave-out experiments
+ Strict linear-chart evidence varies by seed, and leave-out experiments
 show that route access is not universally zero-shot. Learned transport maps
 meaningfully repair omitted routes, including complete repair for one tested
 `image+number` setting, but usually remain below full-state patching.
@@ -85,8 +82,7 @@ figures/                     Selected reviewer-facing figures
 ```
 
 Large checkpoints, raw training runs, caches, queue state, and internal handoff
-notes are intentionally excluded. The included result tables are sufficient to
-audit the headline values but not to reconstruct every historical run.
+notes are intentionally excluded. 
 
 ## Verification
 
@@ -101,8 +97,7 @@ See [SMOKE_TESTS.md](SMOKE_TESTS.md) and
 [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
 ## Scope
-
-This is a research artifact for review. The QNN code simulates statevectors on
+ The QNN code simulates statevectors on
 classical hardware. The experiments do not establish hardware speedup,
 resource advantage, universal cross-modality transfer, or a general theory of
 multimodal representation learning.
